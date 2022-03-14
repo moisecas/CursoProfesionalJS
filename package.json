@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Proyecto del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
   "license": "MIT",
-  "author": "moisecas>", 
+  "author": "moisecas>",
   "keywords": [
     "platzi"
   ],
@@ -11,6 +11,7 @@
     "start": "live-server"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "eslint": "^8.11.0",
+    "live-server": "^1.1.0"
   }
 }
