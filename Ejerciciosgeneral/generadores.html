@@ -13,20 +13,20 @@
       // Cada vez que llamamos next, la ejecución del generador va a continuar hasta el proximo yield
       function* simpleGenerator() { //* pegado literal, creando un generador
         console.log('GENERATOR START');
-        yield 1;
+        yield 1; //yield es como un return, permiten manejar cierto comportamiento asincrono 
         yield 2;
         yield 3;
-        console.log('GENERATOR END');
+        console.log('GENERATOR END'); //código de una función en iterable
       }
 
       // const gen = simpleGenerator();
 
       // Podemos hacer generadores infinitos.
-      function* idMaker() { //generar id
-        let id = 1;
+      function* idMaker() { //va a generar id
+        let id = 1; //variable id declarada que inicia en 1
         while (true) { //while true, es peligroso, puede quedarse ahí y se romperá 
-          yield id;
-          id = id + 1;
+          yield id; //yield, regresar, la ejecución va hasta el primer yield y regresa 
+          id = id + 1; //id va a ir incrementando 
         }
       }
 
@@ -35,7 +35,7 @@
         let id = 1;
         let reset;
         while (true) {
-          reset = yield id;
+          reset = yield id; // acá se va a detener por primera vez 
           if (reset) {
             id = 1;
           } else {
