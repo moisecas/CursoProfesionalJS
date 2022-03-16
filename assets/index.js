@@ -8,3 +8,11 @@ const player = new mediaPlayer({el:video, plugins:[
 
 const button = document.querySelector("button") 
 button.onclick = () => player.togglePlay();
+
+//detectar si el navegador del usuario tiene service worker 
+
+if ('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js').catch(error =>{ //capturar error
+        console.log(error.message) 
+    })
+}

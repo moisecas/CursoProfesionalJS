@@ -32,18 +32,18 @@ class autoPause {
             this.player.pause() 
 
         }
-        // handleVisibilityChange() { 
-        //     const isVisible = document.visibilityState === "visible";
-        //     if (isVisible) {
-        //         if(this.pausedByVisibility) {
-        //             this.pausedByVisibility = false;
-        //             this.player.play()
-        //         }
-        //     } else {
-        //         if(!this.player.media.paused) {
-        //             this.pausedByVisibility = true;
-        //             this.player.pause()
-        //         }
+        handleVisibilityChange() { 
+            const isVisible = document.visibilityState === "visible";
+            if (isVisible) {
+                if(this.pausedByVisibility) {
+                    this.pausedByVisibility = false;
+                    this.player.play()
+                }
+            } else {
+                if(!this.player.media.paused) {
+                    this.pausedByVisibility = true;
+                    this.player.pause()
+                }
             }
         }
         
